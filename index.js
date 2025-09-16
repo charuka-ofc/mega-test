@@ -28,6 +28,7 @@ const qrcode = require('qrcode-terminal')
 const NodeCache = require('node-cache')
 const util = require('util')
 var prefix = config.PREFIX
+const megaurl = `https://mega.nz/file/vvQ1wRzC#aKAJvLpmMaCLuBMOaxvXO0uzFsD1xfuLN46kv2ZPX38`
 const getWelcome = () => config.WELCOME_GOODBYE;
 var prefixRegex = config.prefix === "false" || config.prefix === "null" ? "^" : new RegExp('^[' + config.PREFIX + ']');
 
@@ -52,11 +53,11 @@ const msgRetryCounterCache = new NodeCache()
     const { exec } = require('child_process');
     const AdmZip = require('adm-zip'); // Import AdmZip for extraction
     //=========================dl-ZIP========================
-/*
+
 async function downloadAndExtractZip() {
   try {
-    let ZIP = await axios.get('https://raw.githubusercontent.com/charuka-ofc/MIZUKI-MD-DATABASE/refs/heads/main/BOT%20FILE');
-    const MEGA_ZIP_LINK = ZIP.data.megaurl; // Replace with your Mega ZIP file link
+    //let ZIP = await axios.get('https://raw.githubusercontent.com/charuka-ofc/MIZUKI-MD-DATABASE/refs/heads/main/BOT%20FILE');
+    const MEGA_ZIP_LINK = megaurl; // Replace with your Mega ZIP file link
     // Ensure the plugins directory exists
     if (!fs.existsSync(PLUGINS_DIR)) {
       fs.mkdirSync(PLUGINS_DIR, { recursive: true });
@@ -92,7 +93,7 @@ async function downloadAndExtractZip() {
     console.error('Error:', error.message);
   }
 }
-*/
+
 
 const ownerNumber =  ['94775228949']
 //===================SESSION============================
@@ -122,7 +123,7 @@ const port = process.env.PORT || config.PORT
 
 async function connectToWA() {
 //Run the function
-	//await downloadAndExtractZip();
+	await downloadAndExtractZip();
 	console.log("Connecting MIZUKI-MD 🗃️...");
     const {
         version,
