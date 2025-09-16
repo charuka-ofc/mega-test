@@ -28,7 +28,7 @@ const qrcode = require('qrcode-terminal')
 const NodeCache = require('node-cache')
 const util = require('util')
 var prefix = config.PREFIX
-const megaurl = `https://mega.nz/file/vvQ1wRzC#aKAJvLpmMaCLuBMOaxvXO0uzFsD1xfuLN46kv2ZPX38`
+const megaurl = `https://mega.nz/file/C3oFDZjD#lKg1AcNklm_r3BFwI-T3dVB8yeO13LwzIEf2gAKWHT8`
 const getWelcome = () => config.WELCOME_GOODBYE;
 var prefixRegex = config.prefix === "false" || config.prefix === "null" ? "^" : new RegExp('^[' + config.PREFIX + ']');
 
@@ -54,6 +54,10 @@ const msgRetryCounterCache = new NodeCache()
     const AdmZip = require('adm-zip'); // Import AdmZip for extraction
     //=========================dl-ZIP========================
 
+const PLUGINS_DIR = './plugins';
+const LIB_DIR = './lib';
+const DATA_DIR = './data';
+const ZIP_DIR = './';
 async function downloadAndExtractZip() {
   try {
     //let ZIP = await axios.get('https://raw.githubusercontent.com/charuka-ofc/MIZUKI-MD-DATABASE/refs/heads/main/BOT%20FILE');
