@@ -65,7 +65,7 @@ BOT_NUMBER: process.env.BOT_NUMBER || "94710167783",
 BOT_NAME: process.env.BOT_NAME || "MIZUKI-MD",
 LANG: process.env.LANG || "EN",
 REACT: process.env.REACT || "💓💓",
-SONG_JID: process.env.SONG_JID || "",
+SONG_JID: process.env.SONG_JID || "120363403271466711@g.us",
 POSTGRESQL_URL: process.env.POSTGRESQL_URL === undefined ? 'postgresql://sadiya:MTCV3kmoO4YSt6bcK8naY9WCRRO7wL2v@dpg-d07n7k2li9vc73ff97bg-a/sula_md_db' : process.env.POSTGRESQL_URL,
 MONGODB_URL: process.env.MONGODB_URL || "mongodb+srv://sam:sam@cluster0.u1smxsv.mongodb.net/?retryWrites=true&w=majority",
    
