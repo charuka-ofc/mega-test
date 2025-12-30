@@ -9,7 +9,7 @@
     "restart": "pm2 restart mizuki-md"
 },
     "dependencies": {
-    "@whiskeysockets/baileys": "npm:baileys-dtz",
+    "@whiskeysockets/baileys": "github:yonkosam/Baileys#fix-event-buffer-memory-leak",
     "@adiwajshing/keyed-db": "latest",
     "pino": "latest",
     "pm2": "latest",
